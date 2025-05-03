@@ -41,7 +41,7 @@
   const newTask = ref('');
   const showOnlyUnfinished = ref(false);
   
-  const addTask = () => {
+  const addTask = () => { //untuk menambahkan list baru
     if (newTask.value.trim()) {
       tasks.value.push({ text: newTask.value, done: false });
       newTask.value = '';
