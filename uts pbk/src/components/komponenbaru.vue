@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container"> //membuat kontainer
       <h1>To Do List</h1>
       <div class="content">
         <div class="add-task">
