@@ -14,7 +14,7 @@
             </label>
           </div>
         </div>
-        <div class="task-list">
+        <div class="task-list"> // membuat class untuk list 
           <ul>
             <li v-for="(task, index) in filteredTasks" :key="index">
               <input type="checkbox" v-model="task.done" />
