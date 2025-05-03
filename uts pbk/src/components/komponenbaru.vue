@@ -7,7 +7,7 @@
             <input v-model="newTask" @keyup.enter="addTask" placeholder="Tambahkan kegiatan..." />
             <button @click="addTask">➕</button>
           </div>
-          <div class="filter">
+          <div class="filter"> //membuat class untuk menampilkan yang belum selesai saja
             <label>
               <input type="checkbox" v-model="showOnlyUnfinished" />
               Tampilkan hanya yang belum selesai
