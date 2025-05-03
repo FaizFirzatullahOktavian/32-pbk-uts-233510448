@@ -30,7 +30,7 @@
   <script setup>
   import { ref, computed } from 'vue';
   
-  const tasks = ref([
+  const tasks = ref([ //membuat list yang sudah ada dari awal
     { text: 'Mengerjakan tugas kuliah', done: false },
     { text: 'Belanja kebutuhan mingguan', done: true },
     { text: 'Membaca buku VueJS', done: false },
