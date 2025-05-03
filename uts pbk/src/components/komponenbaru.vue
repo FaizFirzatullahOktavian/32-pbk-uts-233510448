@@ -1,5 +1,6 @@
 <template>
-    <div class="container"> //membuat kontainer
+    <!-- membuat container -->
+    <div class="container">
       <h1>To Do List</h1>
       <div class="content">
         <div class="add-task">
@@ -7,14 +8,17 @@
             <input v-model="newTask" @keyup.enter="addTask" placeholder="Tambahkan kegiatan..." />
             <button @click="addTask">➕</button>
           </div>
-          <div class="filter"> //membuat class untuk menampilkan yang belum selesai saja
+          
+          <!-- membuat class untuk menampilkan yang belum selesai saja -->
+          <div class="filter"> 
             <label>
               <input type="checkbox" v-model="showOnlyUnfinished" />
               Tampilkan hanya yang belum selesai
             </label>
           </div>
         </div>
-        <div class="task-list"> // membuat class untuk list 
+        <!-- membuat class untuk list -->
+        <div class="task-list"> 
           <ul>
             <li v-for="(task, index) in filteredTasks" :key="index">
               <input type="checkbox" v-model="task.done" />
@@ -29,8 +33,8 @@
   
   <script setup>
   import { ref, computed } from 'vue';
-  
-  const tasks = ref([ //membuat list yang sudah ada dari awal
+//   membuat list yang sudah ada dari awal
+  const tasks = ref([ 
     { text: 'Mengerjakan tugas kuliah', done: false },
     { text: 'Belanja kebutuhan mingguan', done: true },
     { text: 'Membaca buku VueJS', done: false },
@@ -40,15 +44,15 @@
   
   const newTask = ref('');
   const showOnlyUnfinished = ref(false);
-  
-  const addTask = () => { //untuk menambahkan list baru
+//   untuk menambahkan list baru
+  const addTask = () => { 
     if (newTask.value.trim()) {
       tasks.value.push({ text: newTask.value, done: false });
       newTask.value = '';
     }
   };
-  
-  const removeTask = (index) => { //untuk menghapus list
+//untuk menghapus list  
+  const removeTask = (index) => { 
     tasks.value.splice(index, 1);
   };
   
