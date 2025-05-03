@@ -48,7 +48,7 @@
     }
   };
   
-  const removeTask = (index) => {
+  const removeTask = (index) => { //untuk menghapus list
     tasks.value.splice(index, 1);
   };
   
