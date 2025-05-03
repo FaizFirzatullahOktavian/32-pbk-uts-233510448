@@ -1,5 +1,5 @@
 <template>
-  <!-- membuat container -->
+  
   <div class="container">
     <h1>To Do List</h1>
     <div class="content">
@@ -9,7 +9,7 @@
           <button @click="addTask">➕</button>
         </div>
 
-        <!-- membuat class untuk menampilkan yang belum selesai saja -->
+       
         <div class="filter">
           <label>
             <input type="checkbox" v-model="showOnlyUnfinished" />
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <!-- membuat class untuk list -->
+     
       <div class="task-list">
         <ul>
           <li v-for="(task, index) in filteredTasks" :key="index">
@@ -35,7 +35,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 
-// membuat list yang sudah ada dari awal
+
 const tasks = ref([
   { text: 'Mengerjakan tugas kuliah', done: false },
   { text: 'Belanja kebutuhan mingguan', done: true },
@@ -47,7 +47,7 @@ const tasks = ref([
 const newTask = ref('');
 const showOnlyUnfinished = ref(false);
 
-// untuk menambahkan list baru
+
 const addTask = () => {
   if (newTask.value.trim()) {
     tasks.value.push({ text: newTask.value, done: false });
@@ -55,7 +55,7 @@ const addTask = () => {
   }
 };
 
-// untuk menghapus list
+
 const removeTask = (index) => {
   tasks.value.splice(index, 1);
 };
